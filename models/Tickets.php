@@ -36,7 +36,7 @@ class Tickets extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['ticket_no','title', 'category_id', 'customer_id'], 'required'],
+            [['title', 'category_id', 'customer_id'], 'required'],
             [['ticket_no', 'category_id', 'customer_id', 'created_by', 'updated_by', 'deleted', 'deleted_by'], 'integer'],
             [['status'], 'string'],
             [['created_at', 'updated_at', 'deleted_at'], 'safe'],
